@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Styles Demo</title>
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      div {
+        margin: 24px;
+        padding: 12px;
+        width: 300px;
+      }
+      h2 {
+        background-color: gold;
+        text-align: center;
+      }
+      h2 + p {
+        font-size: 1.4em;
+      }
+
+      p::first-letter {
+        font-size: 2em;
+        color: red;
+      }
+      a:link {
+        text-decoration: none;
+        color: orange;
+        font-weight: 600;
+      }
+      a:visited {
+        color: rgb(34, 83, 83);
+      }
+      a:hover {
+        color: black;
+      }
+      a:active {
+        color: green;
+      }
+      .container {
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div style="border: 1px red solid">
+        <h2>Heading Information</h2>
+
+        <p>New Paragraph Element</p>
+
+        <ul>
+          <li>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Perspiciatis tempore laudantium neque! Ipsa recusandae aliquid
+              deleniti sequi eaque, suscipit accusantium.
+            </p>
+          </li>
+        </ul>
+
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa,
+          molestiae.
+        </p>
+
+        <p>
+          For More Info, please visit
+          <a href="http://www.yahoo.com">Our Website</a>
+        </p>
+
+        <select name="" id="">
+          <option value="">2</option>
+          <option value="">1</option>
+        </select>
+
+        <table>
+          <tbody>
+            <tr>
+              <td><label for="username">Username:</label></td>
+              <td><input type="text" name="username" /></td>
+            </tr>
+            <tr>
+              <td><label for="password">Password:</label></td>
+              <td><input type="text" name="password" /></td>
+            </tr>
+
+            <tr>
+              <td><label for="felings">Feelings:</label></td>
+              <td>
+                <input type="radio" name="feelings" id="" /> Elated <br />
+                <input type="radio" name="feelings" id="" /> Enthusiastic <br />
+                <input type="radio" name="feelings" id="" /> Humbled <br />
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <textarea name="" id="" cols="30" rows="4"></textarea>
+      </div>
+    </div>
+  </body>
+</html>
