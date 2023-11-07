@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Storage Demo</title>
+  </head>
+  <body>
+    <h1>Web Storage Demo</h1>
+
+    <form>
+      <label for="favColor">Favorate Color :</label>
+      <input type="color" name="favColor" id="favColor" />
+      <br />
+      <input type="button" value="Submit" onclick="btnClick(event)" />
+    </form>
+
+    <script>
+      var inputEl = document.getElementById("favColor");
+
+      window.onload = function () {
+        var color = localStorage.getItem("favColor");
+        if (color) {
+          inputEl.value = color;
+        }
+      };
+
+      function btnClick(event) {
+        event.preventDefault();
+        console.log("FAV COLOR : ", inputEl.value);
+        localStorage.setItem("favColor", inputEl.value);
+        sessionStorage.setItem("favColor", inputEl.value);
+      }
+    </script>
+  </body>
+</html>

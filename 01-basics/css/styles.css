@@ -19,7 +19,9 @@ header {
   margin-bottom: 36px;
   position: relative;
 }
-
+header nav {
+  float: right;
+}
 header nav ul {
   list-style: none;
   text-align: center;
@@ -28,6 +30,9 @@ header nav ul {
 header nav ul li {
   display: inline-block;
   margin: 18px;
+}
+li:last-child {
+  margin-right: 0;
 }
 
 header nav ul li a:link,
@@ -54,6 +59,7 @@ main {
 
 main h2 {
   margin-bottom: 24px;
+  letter-spacing: 1px;
 }
 
 main img {
@@ -95,18 +101,18 @@ main p {
 
 main ul {
   padding-left: 18px;
+  list-style-type: square;
 }
 
 main ul li {
   margin-bottom: 18px;
 }
-
 .container .btn-like {
   background-color: tomato;
   color: #fff;
   border: none;
   display: inline-block;
-  padding: 24px 36px;
+  padding: 16px 32px;
   position: absolute;
   font-size: 24px;
   font-weight: 600;
