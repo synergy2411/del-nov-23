@@ -30,17 +30,15 @@ header nav ul li {
   margin: 18px;
 }
 
-header nav ul li a:link {
-  color: rgb(11, 234, 160);
+header nav ul li a:link,
+a:visited {
+  color: #0ca678;
   text-decoration: none;
   font-size: 1.2em;
   font-weight: 600;
 }
-header nav ul li a:visited {
-  color: rgb(5, 51, 121);
-}
 header nav ul li a:hover {
-  color: orangered;
+  color: #0ca678;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -51,7 +49,7 @@ header nav ul li a:active {
 main {
   float: left;
   width: 60%;
-  margin-right: 12px;
+  margin-right: 6%;
 }
 
 main h2 {
@@ -87,7 +85,7 @@ aside h4 {
 
 aside ul li a {
   text-decoration: none;
-  color: #444;
+  color: #0ca678;
 }
 
 main p {
@@ -110,10 +108,10 @@ main ul li {
   display: inline-block;
   padding: 24px 36px;
   position: absolute;
-  bottom: -600px;
-  right: 50px;
   font-size: 24px;
   font-weight: 600;
+  right: 0;
+  bottom: 10px;
 }
 
 .container .btn-like:hover {
@@ -130,11 +128,6 @@ header .my-icon {
   top: 0;
 }
 
-/* footer {
-  
+footer {
+  border-bottom: 5px #0ca678 solid;
 }
-
-.clearfix::after {
-  content: "";
-  clear: both;
-} */
