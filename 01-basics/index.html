@@ -3,89 +3,116 @@
 <html lang="en">
   <head>
     <title>My First Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
 
   <body>
-    <div class="container">
-      <!-- header -->
-      <header>
-        <nav>
+    <div class="main-container">
+      <div class="container">
+        <!-- header -->
+        <header>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 my-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"
+            />
+          </svg>
+
+          <nav>
+            <ul>
+              <li>
+                <a href="">Web Foundation - HTML</a>
+              </li>
+              <li>
+                <a href="">CSS FlexBox</a>
+              </li>
+              <li>
+                <a href="">CSS RWD</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <!-- main -->
+        <main>
+          <h2>Web Programming Fundamentals</h2>
+
+          <div>
+            <img
+              src="../images/random.jpg"
+              alt="The author image of this post"
+            />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              <strong>Odio, totam</strong>
+            </p>
+          </div>
+
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a
+            non eaque, blanditiis reprehenderit temporibus quibusdam laborum.
+            Est illo voluptatum enim, magni asperiores sint error sequi aperiam
+            nostrum impedit amet accusamus ab optio tenetur at voluptatem?
+            Molestias nisi laborum harum, suscipit, ea fugiat consequuntur id
+            optio non ex quisquam itaque.
+          </p>
+          <p>
+            Magni asperiores sint error sequi aperiam nostrum impedit amet
+            accusamus ab optio tenetur at voluptatem? Molestias nisi laborum
+            harum, suscipit, ea fugiat consequuntur id optio non ex quisquam
+            itaque.
+          </p>
           <ul>
             <li>
-              <a href="">Web Foundation - HTML</a>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. iure
+              reiciendis nemo quisquam,
+            </li>
+            <li>Voluptates numquam temporibus similique libero velit?</li>
+            <li>
+              Aliquam, reprehenderit numquam! Beatae, sapiente sunt? Repellat
+            </li>
+            <li>Ut laudantium fuga est rem</li>
+          </ul>
+        </main>
+
+        <!-- sidebar -->
+        <aside>
+          <h4>Similar Links</h4>
+          <ul>
+            <li>
+              <a href="">Web Programming HTML</a>
             </li>
             <li>
-              <a href="">CSS FlexBox</a>
+              <a href="">More about CSS Grids</a>
             </li>
             <li>
-              <a href="">CSS RWD</a>
+              <a href="">Learn Bootstrap</a>
             </li>
           </ul>
-        </nav>
-      </header>
+        </aside>
 
-      <!-- sidebar -->
-      <!-- <aside>
-        <h4>Similar Links</h4>
-        <ul>
-          <li>
-            <a href="">Web Programming HTML</a>
-          </li>
-          <li>
-            <a href="">More about CSS Grids</a>
-          </li>
-          <li>
-            <a href="">Learn Bootstrap</a>
-          </li>
-        </ul>
-      </aside> -->
+        <!-- footer -->
+        <!-- <footer>
+        <strong> &copy; Web Programming 2023</strong>
+      </footer> -->
 
-      <!-- main -->
-      <main>
-        <h1>Web Programming Fundamentals</h1>
-
-        <div>
-          <img
-            src="https://picsum.photos/100"
-            alt="The author image of this post"
-          />
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            <strong>Odio, totam</strong>
-          </p>
-        </div>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore a non
-          eaque, blanditiis reprehenderit temporibus quibusdam laborum. Est illo
-          voluptatum enim, magni asperiores sint error sequi aperiam nostrum
-          impedit amet accusamus ab optio tenetur at voluptatem? Molestias nisi
-          laborum harum, suscipit, ea fugiat consequuntur id optio non ex
-          quisquam itaque.
-        </p>
-        <p>
-          Magni asperiores sint error sequi aperiam nostrum impedit amet
-          accusamus ab optio tenetur at voluptatem? Molestias nisi laborum
-          harum, suscipit, ea fugiat consequuntur id optio non ex quisquam
-          itaque.
-        </p>
-        <ul>
-          <li>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. iure
-            reiciendis nemo quisquam,
-          </li>
-          <li>Voluptates numquam temporibus similique libero velit?</li>
-          <li>
-            Aliquam, reprehenderit numquam! Beatae, sapiente sunt? Repellat
-          </li>
-          <li>Ut laudantium fuga est rem</li>
-        </ul>
-      </main>
-
-      <!-- footer -->
-
-      <footer><strong> &copy; Web Programming 2023</strong></footer>
+        <button class="btn-like">♥ LIKE</button>
+      </div>
     </div>
   </body>
 </html>

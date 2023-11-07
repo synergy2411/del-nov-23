@@ -4,15 +4,20 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+  font-family: "Rubik", "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #444;
 }
+
 .container {
-  width: 650px;
+  width: 750px;
   margin: 0 auto;
+  border-top: 5px #0ca678 solid;
+  position: relative;
 }
 header {
   margin-bottom: 36px;
+  position: relative;
 }
 
 header nav ul {
@@ -42,3 +47,94 @@ header nav ul li a:hover {
 header nav ul li a:active {
   color: rgb(11, 234, 160);
 }
+
+main {
+  float: left;
+  width: 60%;
+  margin-right: 12px;
+}
+
+main h2 {
+  margin-bottom: 24px;
+}
+
+main img {
+  width: 100%;
+}
+
+aside {
+  float: left;
+  width: 34%;
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.2);
+}
+
+aside ul {
+  list-style: none;
+}
+
+aside ul li {
+  margin: 12px 0;
+  padding: 12px;
+  cursor: pointer;
+}
+
+aside h4 {
+  padding: 18px;
+  text-align: center;
+  background-color: #0ca678;
+  color: #fff;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #444;
+}
+
+main p {
+  margin-bottom: 18px;
+  line-height: 20px;
+}
+
+main ul {
+  padding-left: 18px;
+}
+
+main ul li {
+  margin-bottom: 18px;
+}
+
+.container .btn-like {
+  background-color: tomato;
+  color: #fff;
+  border: none;
+  display: inline-block;
+  padding: 24px 36px;
+  position: absolute;
+  bottom: -600px;
+  right: 50px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.container .btn-like:hover {
+  background-color: #fff;
+  color: tomato;
+  cursor: pointer;
+}
+
+header .my-icon {
+  width: 72px;
+  color: #0ca678;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* footer {
+  
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+} */
