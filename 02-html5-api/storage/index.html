@@ -12,11 +12,18 @@
       <label for="favColor">Favorate Color :</label>
       <input type="color" name="favColor" id="favColor" />
       <br />
+
+      <label for="role">Role:</label>
+      <input type="checkbox" name="chk" id="admin" value="admin" /> Admin <br />
+      <input type="checkbox" name="chk" id="manager" value="manager" /> Manager
+      <br />
       <input type="button" value="Submit" onclick="btnClick(event)" />
     </form>
 
     <script>
       var inputEl = document.getElementById("favColor");
+
+      var checkboxes = document.getElementsByName("chk");
 
       window.onload = function () {
         var color = localStorage.getItem("favColor");
@@ -27,6 +34,12 @@
 
       function btnClick(event) {
         event.preventDefault();
+
+        for (var i = 0; i < checkboxes.length; i++) {
+          if (checkboxes[i].checked) {
+            console.log("SELETCED : ", checkboxes[i].value);
+          }
+        }
         console.log("FAV COLOR : ", inputEl.value);
         localStorage.setItem("favColor", inputEl.value);
         sessionStorage.setItem("favColor", inputEl.value);

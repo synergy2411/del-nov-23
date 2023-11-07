@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Demo</title>
+  </head>
+  <body>
+    <h1>Audio Demo</h1>
+
+    <!-- <audio>
+      <source src="./sample.mp3" media="mp3" />
+      <source src="./sample.ogg" media="ogg" />
+    </audio>
+    <p>
+      Your broser does not support Audio element. To listene, please
+      <a href="./sample.mp3">Download here</a>
+    </p>
+     -->
+
+    <button onclick="onPlay()">▶</button>
+    <button onclick="onPause()">⏸</button>
+
+    <script>
+      var audioEl = document.createElement("audio");
+
+      audioEl.src = "./sample.mp3";
+
+      function onPlay() {
+        audioEl.play();
+      }
+
+      function onPause() {
+        audioEl.pause();
+      }
+    </script>
+  </body>
+</html>
