@@ -24,19 +24,26 @@
 
     <script>
       var containers = document.querySelectorAll(".container");
+      var srcElement = null;
+
       for (var i = 0; i < containers.length; i++) {
-        containers[i].addEventListener("dragstart", dragStart);
-        containers[i].addEventListener("dragover", dragOver);
-        containers[i].addEventListener("dragend", dragEnd);
-        containers[i].addEventListener("drop", drop);
+        containers[i].addEventListener("dragstart", dragStart); // DRAGGABLE ELEMENT
+        containers[i].addEventListener("dragover", dragOver); // DROPABLE ELEMENT
+        containers[i].addEventListener("drop", drop); // DROPABLE ELEMENT
       }
 
-      function dragStart(event) {}
+      function dragStart(event) {
+        event.dataTransfer.setData("text", event.target.innerText);
+        srcElement = event.target;
+      }
       function dragOver(event) {
         event.preventDefault();
       }
-      function dragEnd(event) {}
-      function drop(event) {}
+      function drop(event) {
+        var text = event.dataTransfer.getData("text");
+        srcElement.innerText = event.target.innerText;
+        event.target.innerText = text;
+      }
     </script>
   </body>
 </html>
