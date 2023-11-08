@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag Drop Task</title>
+    <style>
+      .container {
+        width: 150px;
+        padding: 20px 0;
+        background-color: lightgrey;
+        border: 3px black solid;
+        text-align: center;
+        font-weight: 700;
+        display: inline-block;
+        margin-right: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" draggable="true">A</div>
+    <div class="container" draggable="true">B</div>
+    <div class="container" draggable="true">C</div>
+
+    <script>
+      var containers = document.querySelectorAll(".container");
+      for (var i = 0; i < containers.length; i++) {
+        containers[i].addEventListener("dragstart", dragStart);
+        containers[i].addEventListener("dragover", dragOver);
+        containers[i].addEventListener("dragend", dragEnd);
+        containers[i].addEventListener("drop", drop);
+      }
+
+      function dragStart(event) {}
+      function dragOver(event) {
+        event.preventDefault();
+      }
+      function dragEnd(event) {}
+      function drop(event) {}
+    </script>
+  </body>
+</html>

@@ -31,6 +31,7 @@
       imgEl.addEventListener("dragstart", function (event) {
         var imageId = event.target.id;
         event.dataTransfer.setData("text", imageId);
+        // event.dataTransfer.dragEffects="move";
       });
 
       imgEl.addEventListener("dragenter", function (event) {});
