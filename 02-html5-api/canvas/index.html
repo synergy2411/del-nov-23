@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas Demo</title>
+  </head>
+  <body>
+    <h1>Canvas Demo</h1>
+    <canvas
+      id="canvasId"
+      width="400px"
+      height="400px"
+      style="border: 1px grey dashed"
+    ></canvas>
+
+    <script>
+      var canvasEl = document.querySelector("#canvasId");
+
+      var context = canvasEl.getContext("2d");
+
+      //   context.strokeStyle = "red";
+      //   context.strokeRect(25, 25, 100, 100);
+
+      //   context.fillStyle = "green";
+      //   context.fillRect(50, 50, 100, 100);
+
+      //   context.beginPath();
+
+      //   context.moveTo(10, 10);
+      //   context.lineTo(50, 50);
+      //   context.lineTo(10, 90);
+      //   context.fill();
+      //   context.closePath();
+
+      //   context.fillStyle = "red";
+      //   context.fillRect(10, 10, 100, 50);
+      //   context.fillStyle = "green";
+      //   context.fillRect(100, 10, 100, 50);
+
+      context.beginPath();
+      context.moveTo(150, 60);
+      context.fillStyle = "yellow";
+      context.arc(100, 100, 80, 0, Math.PI * 2);
+      context.fill();
+      context.closePath();
+
+      context.beginPath();
+      context.fillStyle = "black";
+      context.arc(70, 80, 10, 0, Math.PI * 2);
+      context.fill();
+      context.closePath();
+
+      context.beginPath();
+      context.fillStyle = "black";
+      context.arc(135, 80, 10, 0, Math.PI * 2);
+      context.fill();
+      context.closePath();
+
+      context.beginPath();
+      context.fillStyle = "black";
+      context.arc(104, 120, 30, 0, Math.PI);
+      context.fill();
+      context.closePath();
+
+      //   context.moveTo(126, 50);
+      //   context.arc(120, 50, 6, 0, Math.PI * 2);
+      //   context.moveTo(122, 80);
+
+      //   context.stroke();
+    </script>
+  </body>
+</html>
