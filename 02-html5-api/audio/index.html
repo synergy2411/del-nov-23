@@ -8,7 +8,7 @@
   <body>
     <h1>Audio Demo</h1>
 
-    <!-- <audio>
+    <!-- <audio controls>
       <source src="./sample.mp3" media="mp3" />
       <source src="./sample.ogg" media="ogg" />
     </audio>
@@ -18,20 +18,30 @@
     </p>
      -->
 
+    <video
+      src="https://www.w3resource.com/html-css-exercise/big_buck_bunny.mp4"
+      controls
+      id="video"
+      width="300px"
+      height="300px"
+      poster="../../images/random.jpg"
+    ></video>
+
     <button onclick="onPlay()">▶</button>
     <button onclick="onPause()">⏸</button>
 
     <script>
       var audioEl = document.createElement("audio");
-
       audioEl.src = "./sample.mp3";
 
+      var videoEl = document.getElementById("video");
+
       function onPlay() {
-        audioEl.play();
+        videoEl.play();
       }
 
       function onPause() {
-        audioEl.pause();
+        videoEl.pause();
       }
     </script>
   </body>

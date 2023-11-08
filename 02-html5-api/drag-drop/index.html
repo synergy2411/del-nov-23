@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag Drop Demo</title>
+
+    <style>
+      .container {
+        width: 400px;
+        height: 400px;
+        background-color: lightgrey;
+        border: 2px red wavy;
+      }
+      img {
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Drag Drop Demo</h1>
+
+    <div class="container"></div>
+
+    <img src="../../images/random.jpg" alt="" draggable id="imgId" />
+
+    <script>
+      var container = document.querySelector(".container");
+      var imgEl = document.querySelector("#imgId");
+
+      imgEl.addEventListener("dragstart", function (event) {
+        var imageId = event.target.id;
+        event.dataTransfer.setData("text", imageId);
+      });
+
+      imgEl.addEventListener("dragenter", function (event) {});
+
+      imgEl.addEventListener("dragend", function (event) {});
+      container.addEventListener("dragover", function (event) {
+        event.preventDefault();
+      });
+      container.addEventListener("drop", function (event) {
+        var imageId = event.dataTransfer.getData("text");
+        var img = document.getElementById(imageId);
+        event.target.appendChild(img);
+      });
+    </script>
+  </body>
+</html>

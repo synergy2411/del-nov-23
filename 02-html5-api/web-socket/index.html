@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Socket Demo</title>
+  </head>
+  <body>
+    <div id="content"></div>
+
+    <textarea
+      name="stack"
+      id="messageStack"
+      readonly
+      cols="30"
+      rows="10"
+    ></textarea>
+    <br />
+    <input type="text" name="input" id="txtMessage" />
+    <button id="btnSend">Send</button>
+    <script>
+      var chatterName = prompt("Please enter your name");
+      var txtMessage = document.getElementById("txtMessage");
+      var messageStack = document.getElementById("messageStack");
+
+      var socket = new WebSocket("ws://localhost:1337");
+      socket.addEventListener("open", function () {
+        console.log("Connected...");
+      });
+      btnSend.addEventListener("click", function () {
+        var message = txtMessage.value;
+        var data = { message, chatterName };
+        socket.send(JSON.stringify(data));
+        txtMessage.value = "";
+      });
+      socket.addEventListener("message", function (message) {
+        // console.log("Server says : ", message.data);
+        var data = JSON.parse(message.data);
+        messageStack.innerHTML +=
+          data.chatterName + " : " + data.message + "\n";
+      });
+    </script>
+  </body>
+</html>
