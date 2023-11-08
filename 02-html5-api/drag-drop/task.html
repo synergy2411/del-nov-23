@@ -15,6 +15,14 @@
         display: inline-block;
         margin-right: 24px;
       }
+
+      .opaque {
+        opacity: 0.4;
+      }
+
+      .dropable {
+        border: 3px black dashed;
+      }
     </style>
   </head>
   <body>
@@ -35,14 +43,18 @@
       function dragStart(event) {
         event.dataTransfer.setData("text", event.target.innerText);
         srcElement = event.target;
+        srcElement.classList.add("opaque");
       }
       function dragOver(event) {
         event.preventDefault();
+        event.target.classList.add("dropable");
       }
       function drop(event) {
         var text = event.dataTransfer.getData("text");
         srcElement.innerText = event.target.innerText;
+        srcElement.classList.remove("opaque", "dropable");
         event.target.innerText = text;
+        event.target.classList.remove("dropable");
       }
     </script>
   </body>
