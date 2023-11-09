@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Map</title>
+  </head>
+  <body>
+    <img
+      src="../images/random_objects.jpg"
+      alt="Random Objects"
+      usemap="#my-imagemap"
+    />
+
+    <map name="my-imagemap">
+      <area
+        shape="rect"
+        coords="172,124,384,344"
+        href="http://www.google.com"
+        alt="This is google page"
+      />
+      <area
+        target="_top"
+        alt="This is MSN page"
+        title=""
+        href="http://www.msn.com"
+        coords="196,536,255,576,325,540,265,469"
+        shape="poly"
+      />
+    </map>
+  </body>
+</html>
