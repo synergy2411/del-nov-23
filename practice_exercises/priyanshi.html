@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag and Drop-Task</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>DRAG AND DROP THE LETTER</header>
+    <div class="container">
+      <div class="box1">
+        <div class="drag-elements" draggable="true" id="d">D</div>
+        <div class="drag-elements" draggable="true" id="p">P</div>
+        <div class="drag-elements" draggable="true" id="w">W</div>
+        <div class="drag-elements" draggable="true" id="o">O</div>
+        <div class="drag-elements" draggable="true" id="g">G</div>
+        <div class="drag-elements" draggable="true" id="k">K</div>
+        <div class="drag-elements" draggable="true" id="u">U</div>
+        <div class="drag-elements" draggable="true" id="e">E</div>
+        <div class="drag-elements" draggable="true" id="h">H</div>
+        <div class="drag-elements" draggable="true" id="m">M</div>
+        <div class="drag-elements" draggable="true" id="c">C</div>
+        <div class="drag-elements" draggable="true" id="s">S</div>
+      </div>
+      <div class="box2">
+        <div class="drop-elements" data-id="c">
+          B <span id="span-c">/----/</span> D
+        </div>
+        <div class="drop-elements" data-id="h">
+          G <span class="replace">/----/</span> I
+        </div>
+        <div class="drop-elements" data-id="k">
+          J <span class="replace">/----/</span> L
+        </div>
+        <div class="drop-elements" data-id="d">
+          C <span class="replace">/----/</span> E
+        </div>
+        <div class="drop-elements" data-id="m">
+          L <span class="replace">/----/</span> N
+        </div>
+        <div class="drop-elements" data-id="p">
+          O <span class="replace">/----/</span> Q
+        </div>
+        <div class="drop-elements" data-id="s">
+          R <span class="replace">/----/</span> T
+        </div>
+        <div class="drop-elements" data-id="u">
+          T <span class="replace">/----/</span> V
+        </div>
+        <div class="drop-elements" data-id="w">
+          V <span class="replace">/----/</span> X
+        </div>
+        <div class="drop-elements" data-id="e">
+          D <span class="replace">/----/</span> F
+        </div>
+        <div class="drop-elements" data-id="g">
+          F <span class="replace">/----/</span> H
+        </div>
+        <div class="drop-elements" data-id="o">
+          N <span class="replace">/----/</span> P
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>

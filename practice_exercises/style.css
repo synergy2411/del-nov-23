@@ -1,0 +1,50 @@
+.container {
+  margin: auto;
+}
+
+header {
+  text-align: center;
+}
+
+.box1 {
+  float: left;
+
+  border: 1px black solid;
+  margin: 10px;
+  border-radius: 2%;
+  margin: 40px;
+}
+
+.box2 {
+  float: left;
+  border: 1px black solid;
+  margin: 40px;
+  border-radius: 2%;
+  background-color: rgb(12, 122, 122);
+}
+
+.drag-elements {
+  color: white;
+  font-size: 12px;
+  width: 100px;
+  padding: 8px;
+  border: 1px black solid;
+  background-color: rgb(114, 15, 15);
+  text-align: center;
+  margin: 5px 5px 10px 5px;
+}
+.drop-elements {
+  color: black;
+  font-size: 12px;
+  width: 150px;
+  padding: 8px;
+  border: 1px black solid;
+  background-color: white;
+  text-align: center;
+  margin: 5px 5px 10px 5px;
+}
+
+.drag-elements:hover {
+  cursor: move;
+  opacity: 0.8;
+}
