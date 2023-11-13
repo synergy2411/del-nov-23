@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Demo</title>
+
+    <style>
+      .container {
+        background-color: lightgrey;
+        font-size: 28px;
+        display: flex;
+        /* gap: 5px; */
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* flex-wrap: wrap; */
+      }
+
+      .box-1 {
+        background-color: yellow;
+      }
+      .box-2 {
+        background-color: green;
+      }
+      .box-3 {
+        background-color: blue;
+        height: 150px;
+      }
+      .box-4 {
+        background-color: gold;
+        order: -1;
+      }
+      .box-5 {
+        background-color: aquamarine;
+        order: 1;
+      }
+      .box-6 {
+        background-color: brown;
+      }
+      .box-7 {
+        background-color: burlywood;
+        order: 2;
+        align-self: flex-end;
+      }
+      .box-8 {
+        background-color: tomato;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flexbox Demo</h1>
+
+    <div class="container">
+      <div class="box-1">Flexbox (1)</div>
+      <div class="box-2">and (2)</div>
+      <div class="box-3">Grids (3)</div>
+      <div class="box-4">are (4)</div>
+      <div class="box-5">great (5)</div>
+      <div class="box-6">for (6)</div>
+      <div class="box-7">building (7)</div>
+      <div class="box-8">layouts (8)</div>
+    </div>
+  </body>
+</html>
