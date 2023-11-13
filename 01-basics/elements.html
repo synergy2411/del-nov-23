@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .container {
+        border: 1px red solid;
+        width: 400px;
+        height: 400px;
+        margin: auto 0;
+      }
+
+      .box {
+        border: 1px black solid;
+        background-color: grey;
+        width: 50%;
+        height: 50%;
+        /* transition: all 1s cubic-bezier(0.07, 0.72, 1, 0.63); */
+        animation-name: myanim;
+        animation-duration: 3000ms;
+        animation-timing-function: ease-in-out;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: 3;
+        animation-direction: alternate;
+      }
+
+      .box:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes myanim {
+        0% {
+          background-color: green;
+          transform: translate(0, 0);
+        }
+        25% {
+          background-color: grey;
+          transform: translateX(200px);
+          border-radius: 50% 0 0 0;
+        }
+        50% {
+          background-color: yellow;
+          transform: translate(200px, 200px);
+          border-radius: 50% 50% 0 0;
+        }
+        75% {
+          background-color: blue;
+          transform: translate(0, 200px);
+          border-radius: 50% 50% 50% 0;
+        }
+        100% {
+          background-color: black;
+          transform: translate(0, 0);
+          border-radius: 50%;
+        }
+      }
+
+      /* .box:hover {
+        background-color: blue;
+        transform: translate(200px, 200px); */
+      /* transform: scale(20%, 20%); */
+      /* transform: rotateY(90deg); */
+      /* } */
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
