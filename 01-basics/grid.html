@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Demo</title>
+    <style>
+      .container {
+        display: grid;
+        font-size: 24px;
+        height: 300px;
+        background-color: lightgrey;
+        /* grid-template-columns: 200px 200px 200px 150px; */
+        grid-template-columns: 1fr 250px 1fr 1fr;
+        row-gap: 12px;
+        column-gap: 12px;
+        /* justify-items: center;
+        align-items: center;
+        justify-content: center;
+        align-content: center; */
+      }
+
+      .box-1 {
+        background-color: green;
+        grid-column: 1 / -1;
+        /* grid-column-start: 1;
+        grid-column-end: -1; */
+      }
+      .box-2 {
+        background-color: yellow;
+        grid-row: 2 / 4;
+      }
+      .box-3 {
+        background-color: blue;
+      }
+      .box-4 {
+        background-color: aqua;
+      }
+      .box-5 {
+        background-color: gold;
+      }
+      .box-6 {
+        background-color: violet;
+        grid-column: 2 / -1;
+      }
+      .box-7 {
+        background-color: pink;
+        grid-column: 1 / span 2;
+      }
+      .box-8 {
+        background-color: tomato;
+        grid-column: 3 / span 2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Demo</h1>
+
+    <div class="container">
+      <div class="box-1">Flexbox (1)</div>
+      <div class="box-2">and (2)</div>
+      <div class="box-3">Grids (3)</div>
+      <div class="box-4">are (4)</div>
+      <div class="box-5">great (5)</div>
+      <div class="box-6">for (6)</div>
+      <div class="box-7">building (7)</div>
+      <div class="box-8">layouts (8)</div>
+    </div>
+  </body>
+</html>
