@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 62.5%;
+      }
+      h1 {
+        font-size: 4rem;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+      img {
+        max-width: 80%;
+      }
+      body {
+        background-color: lightcoral;
+      }
+
+      @media only screen and (max-width: 768px) {
+        html {
+          font-size: 50%;
+        }
+        body {
+          background-color: grey;
+        }
+        .grid-container {
+          display: grid;
+          max-width: 100%;
+          grid-template-columns: 1fr 1fr;
+          border: 1px red solid;
+        }
+        img {
+          max-width: 100%;
+        }
+        h1 {
+          margin: 10vh;
+        }
+        /* img {
+          max-width: 100%;
+          grid-row: 1 / 2;
+        } */
+      }
+      @media only screen and (max-width: 600px) {
+        html {
+          font-size: 38.5%;
+        }
+        body {
+          background-color: lightgoldenrodyellow;
+        }
+        .grid-container {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <h1>Header Text</h1>
+      <img src="../images/unsplash.jpg" alt="" />
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
+        magni?
+      </p>
+    </div>
+  </body>
+</html>
