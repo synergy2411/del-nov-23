@@ -1,0 +1,14 @@
+{
+  "user": {
+    "name": "John Doe",
+    "age": 32,
+    "email": "Test@test.com",
+    "friends": ["foo", "bar", "bam"],
+    "address": {
+      "street": "201 Main Road",
+      "city": "Mumbai"
+    },
+    "isWorking": true,
+    "dob": "Dec 21, 1984"
+  }
+}

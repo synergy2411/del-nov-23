@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Sumit K" />
+    <meta name="keywords" content="Awesome App Sumit" />
+    <meta name="description" content="this page belongs to demonstartion " />
+    <!-- <meta http-equiv="refresh" content="10" /> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <nav role="navigation" aria-labelledby="navigation">
+      <ul role="listbox">
+        <li role="listitem">
+          <a href="/home" role="link">Home</a>
+        </li>
+      </ul>
+    </nav>
+    <h1>CSS Module Demo</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
+      laudantium ipsum qui ratione culpa ab mollitia facere doloribus doloremque
+      nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+      omnis tenetur voluptatibus officia nesciunt, accusamus dolorem similique,
+      animi, veniam quidem quos et natus. Distinctio, aliquam id. Et sunt
+      accusamus neque fugiat. Recusandae aspernatur tempora assumenda numquam
+      autem aut cumque qui? Facere deleniti ad iusto itaque sint doloremque
+      blanditiis quibusdam magni?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
+      laudantium ipsum qui ratione culpa ab mollitia facere doloribus doloremque
+      nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+      omnis tenetur voluptatibus officia nesciunt, accusamus dolorem similique,
+      animi, veniam quidem quos et natus. Distinctio, aliquam id. Et sunt
+      accusamus neque fugiat. Recusandae aspernatur tempora assumenda numquam
+      autem aut cumque qui? Facere deleniti ad iusto itaque sint doloremque
+      blanditiis quibusdam magni?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
+      laudantium ipsum qui ratione culpa ab mollitia facere doloribus doloremque
+      nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+      omnis tenetur voluptatibus officia nesciunt, accusamus dolorem similique,
+      animi, veniam quidem quos et natus. Distinctio, aliquam id. Et sunt
+      accusamus neque fugiat. Recusandae aspernatur tempora assumenda numquam
+      autem aut cumque qui? Facere deleniti ad iusto itaque sint doloremque
+      blanditiis quibusdam magni?
+    </p>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate
+      laudantium ipsum qui ratione culpa ab mollitia facere doloribus doloremque
+      nobis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet
+      omnis tenetur voluptatibus officia nesciunt, accusamus dolorem similique,
+      animi, veniam quidem quos et natus. Distinctio, aliquam id. Et sunt
+      accusamus neque fugiat. Recusandae aspernatur tempora assumenda numquam
+      autem aut cumque qui? Facere deleniti ad iusto itaque sint doloremque
+      blanditiis quibusdam magni?
+    </p>
+    <button role="button">Submit</button>
+
+    <script>
+      var user = {
+        name: `John Doe`,
+        age: 32,
+        email: "john@test",
+        dob: new Date("Dec 21, 1984"),
+      };
+
+      console.log("JavaScript Value : ", user);
+
+      var JSONConvertedObject = JSON.stringify(user);
+
+      console.log("Converted ", JSONConvertedObject);
+
+      var javaScriptObject = JSON.parse(JSONConvertedObject);
+
+      console.log("Object again : ", javaScriptObject);
+
+      localStorage.setItem("john", JSON.stringify(user));
+
+      var userInfo = localStorage.getItem("john");
+
+      console.log("Without Parsing : ", userInfo.email); // ?
+
+      var parsedUser = JSON.parse(userInfo);
+
+      console.log("Email : ", parsedUser.email);
+    </script>
+  </body>
+</html>
