@@ -1,0 +1,16 @@
+{
+  "name": "07-sass-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass:compile": "sass --watch ./styles/main.scss ./css/main.css"
+  },
+  "keywords": [],
+  "author": "SK",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.3.2",
+    "sass": "^1.69.5"
+  }
+}
