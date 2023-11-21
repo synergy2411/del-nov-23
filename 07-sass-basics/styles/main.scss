@@ -1,0 +1,94 @@
+@use "sass:math";
+@import "./resets";
+@import "./variables";
+@import "./mixin";
+
+
+@function calArea($r){
+    @return math.$pi * $r * $r;
+}
+
+body {
+    @include theme(false);
+}
+
+
+.demo{
+    width: calArea(3);
+}
+
+.container {
+    width :300px;
+    height: 300px;
+    background-color: $secondary-color;
+    color: $primary-color;
+}
+
+header {
+    nav {
+        ul {
+            list-style: none;
+            @include flexCenter(row);
+           
+        }
+        li {
+            display: inline-block;
+            margin: 12px 24px;
+        }
+        a {
+            &:link,&.visited{
+                text-decoration: none;
+                color: $secondary-color;
+                padding: 12px 24px;
+            }
+            &:hover{
+                background-color: $secondary-color;
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+
+aside ul {
+    @include flexCenter(column);
+}
+
+.main{
+    #{&}_paragraph1{
+        font-size: 1.2rem;
+    }
+
+    &_paragraph2{
+        text-transform: uppercase;
+    }
+}
+
+
+.message {
+    font-size: 1.2rem;
+}
+
+.success{
+    color: green;
+    @extend .message;
+}
+
+.error{
+    color: red;
+    @extend .message;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    border: 1px grey solid;
+    display: inline-block;
+}
+
+@for $i from 1 through 5 {
+    .box-#{$i} {
+        // background-color: lighten($color: rgb(10, 0, 0), $amount: 20% * $i);
+        background-color: darken($color: #fff, $amount: 20% * $i);
+    }
+}
