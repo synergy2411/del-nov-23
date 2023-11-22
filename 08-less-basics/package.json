@@ -1,0 +1,17 @@
+{
+  "name": "08-less-basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "less:compile": "lessc --watch styles/styles.less css/styles.css",
+    "less:watch": "less-watch-compiler"
+  },
+  "keywords": [],
+  "author": "SK",
+  "license": "ISC",
+  "dependencies": {
+    "less": "^4.2.0",
+    "less-watch-compiler": "^1.16.3"
+  }
+}
